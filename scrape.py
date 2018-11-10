@@ -5,7 +5,8 @@ import requests
 
 
 # アクセス先URLとUAを設定
-url = 'https://sports.yahoo.co.jp/news/list?id=jleague'
+# url = 'https://sports.yahoo.co.jp/news/list?id=jleague'
+url='http://gigazine.net/'
 ua =  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
 
 
