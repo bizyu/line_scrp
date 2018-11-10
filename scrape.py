@@ -9,17 +9,21 @@ import requests
 url='http://gigazine.net/'
 ua =  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
 
-
+# uaが必要なのはyahooだからで、gigazineはログイン必要ないからいらないかも
+# この部分とどこから言葉を検索するかを書き換えればいいんとちゃう
 
 # 記事取得関数
 def getNews(word):
 
     # 下記はアクセス先に合わせて修正しスクレイピング
-    req = urllib.request.Request(url, headers={'User-Agent': ua})
-    html = urllib.request.urlopen(req)
+    # req = urllib.request.Request(url, headers={'User-Agent': ua})
+    # html = urllib.request.urlopen(req)
+    html = urllib.request.urlopen(url)
     soup = BeautifulSoup(html, "html.parser")
-    main = soup.find('div', attrs={'class': 'modBody'})
-    topics = main.find_all(attrs={'class': 'linkMain'})
+    # main = soup.find('div', attrs={'class': 'modBody'})
+    main = soup.find('div', attrs={'class': 'content'})
+    topics = main.finc_all(attrs={'class':'span'})
+    # topics = main.find_all(attrs={'class': 'linkMain'})
 
     # 該当記事カウント変数と結果格納リスト
     count = 0
