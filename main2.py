@@ -13,7 +13,7 @@ from linebot.models import (
 import urllib.request
 import os
 import json
-import scgiga as sc
+import sccate as sc
 
 
 app = Flask(__name__)
@@ -57,7 +57,7 @@ def handle_message(event):
 
     categ = "please choice categ\n" \
             "モバイル"
-            
+
 # 応答メッセージ（記事検索結果）を送信
     if word != "アメリカ":
         line_bot_api.reply_message(

@@ -18,12 +18,12 @@ def getNews(word):
 	contents=[]
 
 	for tag in tagtag:
+		categgg=tag.find("div",{"class":"date"}).find("span",{"class":"catab"})
 		# if tag.contents[0].find(word) > -1:
 		# if tag.span.contents[0].find(word) > -1:
 		# 	list.append(tag.span.contents[0])
-		if tag.span.contents[0].find(word) > -1:
+		if categgg.contents[0].find(word) > -1:
 			list.append(tag.contents[0])
-
 			list.append(tag.a.get('href'))
 			count += 1
 		if count == 0:
@@ -33,6 +33,6 @@ def getNews(word):
 	result = '\n'.join(list)
 	return result
 
-# word="アメリカ"
-# result = getNews(word)
-# print(result)
+word="動画"
+result = getNews(word)
+print(result)
