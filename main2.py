@@ -55,7 +55,7 @@ def handle_message(event):
     # 記事取得関数を呼び出し
     result = sc.getNews(word)
 
-    categ = "イタリア"
+    categ = "イタ \n リア"
 # 応答メッセージ（記事検索結果）を送信
     if word != "アメリカ":
         line_bot_api.reply_message(
