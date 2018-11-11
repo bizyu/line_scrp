@@ -59,7 +59,7 @@ def handle_message(event):
             "モバイル"
 
 # 応答メッセージ（記事検索結果）を送信
-    if word != "アメリカ":
+    if word == "hello":
         line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=str(categ))
