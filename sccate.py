@@ -23,7 +23,7 @@ def getNews(word):
 		# if tag.span.contents[0].find(word) > -1:
 		# 	list.append(tag.span.contents[0])
 		if categgg.contents[0].find(word) > -1:
-			list.append(tag.contents[0])
+			list.append(tag.span.contents[0])
 			list.append(tag.a.get('href'))
 			count += 1
 		if count == 0:
