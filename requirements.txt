@@ -2,4 +2,4 @@ flask
 line-bot-sdk
 requests
 bs4
-scrape
+scgiga

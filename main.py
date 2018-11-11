@@ -13,7 +13,7 @@ from linebot.models import (
 import urllib.request
 import os
 import json
-import scrape as sc
+import scgiga as sc
 
 
 app = Flask(__name__)

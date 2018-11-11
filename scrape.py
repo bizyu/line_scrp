@@ -5,8 +5,8 @@ import requests
 
 
 # アクセス先URLとUAを設定
-url = 'https://sports.yahoo.co.jp/news/list?id=jleague'
-# url='http://gigazine.net/'
+# url = 'https://sports.yahoo.co.jp/news/list?id=jleague'
+url='http://gigazine.net/'
 ua =  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
 
 # uaが必要なのはyahooだからで、gigazineはログイン必要ないからいらないかも
@@ -14,18 +14,19 @@ ua =  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 
 # 記事取得関数
 def getNews(word):
-
+    global result
     # 下記はアクセス先に合わせて修正しスクレイピング
-    req = urllib.request.Request(url, headers={'User-Agent': ua})
-    html = urllib.request.urlopen(req)
-    # html = urllib.request.urlopen(url)
+    # req = urllib.request.Request(url, headers={'User-Agent': ua})
+    # html = urllib.request.urlopen(req)
+    html = urllib.request.urlopen(url)
     soup = BeautifulSoup(html, "html.parser")
-    main = soup.find('div', attrs={'class': 'modBody'})
-    # tags = soup.find_all("h2")
+
     # topics = soup.find_all("div",{"class":"card"})
-    # main = s/oup.find('div', attrs={'class': 'content'})
-    # topics = main.finc_all(attrs={'class':'span'})
-    topics = main.find_all(attrs={'class': 'linkMain'})
+    main = soup.find('div', attrs={'class': 'section'})
+    topics = main.find_all(attrs={'class':'span'})
+
+    # main = soup.find('div', attrs={'class': 'modBody'})
+    # topics = main.find_all(attrs={'class': 'linkMain'})
 
     # 該当記事カウント変数と結果格納リスト
     count = 0
@@ -34,6 +35,7 @@ def getNews(word):
     # スクレイピング結果から引数wordを含む記事を結果リストに格納
     for topic in topics:
         # name = topic.find("h2").a.string
+        # print(name)
         if topic.contents[0].find(word) > -1:
             list.append(topic.contents[0])
             list.append(topic.get('href'))
