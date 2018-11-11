@@ -56,8 +56,25 @@ def handle_message(event):
     result = sc.getNews(word)
 
     categ = "please choice categ\n" \
-            "モバイル"
+            "モバイル\n"\
+            "ソフトウェア\n"\
+            "ネットサービス\n"\
+            "ウェブアプリ\n"\
+            "ハードウェア\n"\
+            "乗り物\n"\
+            "サイエンス\n"\
+            "生き物\n"\
+            "動画\n"\
+            "映画\n"\
+            "マンガ\n"\
+            "アニメ\n"\
+            "ゲーム\n"\
+            "デザイン\n"\
+            "アート\n"\
+            "食\n"\
+            "メモ"
 
+#この後おすすめでpv数から記事取得
 # 応答メッセージ（記事検索結果）を送信
     if word == "hello":
         line_bot_api.reply_message(
