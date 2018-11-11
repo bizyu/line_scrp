@@ -21,11 +21,14 @@ def getNews(word):
     # html = urllib.request.urlopen(url)
     soup = BeautifulSoup(html, "html.parser")
     main = soup.find('div', attrs={'class': 'modBody'})
+
     # tags = soup.find_all("h2")
     # topics = soup.find_all("div",{"class":"card"})
-    # main = s/oup.find('div', attrs={'class': 'content'})
-    # topics = main.finc_all(attrs={'class':'span'})
-    topics = main.find_all(attrs={'class': 'linkMain'})
+    main = soup.find('div', attrs={'class': 'content'})
+    main2 = main.find('div', attrs={'class': 'card'})
+
+    topics = main2.finc_all(attrs={'class':'span'})
+    # topics = main.find_all(attrs={'class': 'linkMain'})
 
     # 該当記事カウント変数と結果格納リスト
     count = 0
