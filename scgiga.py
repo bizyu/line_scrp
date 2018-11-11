@@ -19,9 +19,12 @@ def getNews(word):
 
 	for tag in tagtag:
 		# if tag.contents[0].find(word) > -1:
+		# if tag.span.contents[0].find(word) > -1:
+		# 	list.append(tag.span.contents[0])
 		if tag.span.contents[0].find(word) > -1:
-			list.append(tag.span.contents[0])
-			list.append(tag.get('href'))
+			list.append(tag.contents[0])
+
+			list.append(tag.a.get('href'))
 			count += 1
 		if count == 0:
 			result.append("該当記事はありません") 
@@ -29,3 +32,7 @@ def getNews(word):
 	list=[str(i) for i in list]
 	result = '\n'.join(list)
 	return result
+
+# word="アメリカ"
+# result = getNews(word)
+# print(result)
