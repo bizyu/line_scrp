@@ -21,8 +21,10 @@ def getNews(word):
     html = urllib.request.urlopen(url)
     soup = BeautifulSoup(html, "html.parser")
     # main = soup.find('div', attrs={'class': 'modBody'})
-    main = soup.find('div', attrs={'class': 'content'})
-    topics = main.finc_all(attrs={'class':'span'})
+    tags = soup.find_all("h2")
+    topics = soup.find_all("div",{"class":"card"})
+    # main = soup.find('div', attrs={'class': 'content'})
+    # topics = main.finc_all(attrs={'class':'span'})
     # topics = main.find_all(attrs={'class': 'linkMain'})
 
     # 該当記事カウント変数と結果格納リスト
@@ -31,6 +33,7 @@ def getNews(word):
 
     # スクレイピング結果から引数wordを含む記事を結果リストに格納
     for topic in topics:
+        # name = topic.find("h2").a.string
         if topic.contents[0].find(word) > -1:
             list.append(topic.contents[0])
             list.append(topic.get('href'))
