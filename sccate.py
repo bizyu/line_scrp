@@ -21,7 +21,7 @@ def getNews(word):
 		# if tag.contents[0].find(word) > -1:
 		# if tag.span.contents[0].find(word) > -1:
 		# 	list.append(tag.span.contents[0])
-		if tag.span.contents[0].find(word) > -1:
+		if tag.catab.contents[0].find(word) > -1:
 			list.append(tag.contents[0])
 
 			list.append(tag.a.get('href'))
