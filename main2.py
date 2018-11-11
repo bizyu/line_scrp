@@ -56,11 +56,7 @@ def handle_message(event):
     result = sc.getNews(word)
 
     categ = "please choice categ\n"\
-            "モバイル\n"\
-            "ソフトウェア\n"\
-            "サイエンス\n"\
-            "生き物"
-            
+            "モバイル"
 # 応答メッセージ（記事検索結果）を送信
     if word != "hello":
         line_bot_api.reply_message(
