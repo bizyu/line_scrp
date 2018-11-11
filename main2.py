@@ -55,21 +55,11 @@ def handle_message(event):
     # 記事取得関数を呼び出し
     result = sc.getNews(word)
 
-categ = 'please choice category \n'\
-        'モバイル'
-
-
 # 応答メッセージ（記事検索結果）を送信
-    if word=="hello":
-        line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text="hello")
-        )
-    else:
-        line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=result)
-        )
+    line_bot_api.reply_message(
+    event.reply_token,
+    TextSendMessage(text=result)
+    )
 
 
 if __name__ == "__main__":
