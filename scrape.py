@@ -5,8 +5,8 @@ import requests
 
 
 # アクセス先URLとUAを設定
-# url = 'https://sports.yahoo.co.jp/news/list?id=jleague'
-url='http://gigazine.net/'
+url = 'https://sports.yahoo.co.jp/news/list?id=jleague'
+# url='http://gigazine.net/'
 ua =  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
 
 # uaが必要なのはyahooだからで、gigazineはログイン必要ないからいらないかも
@@ -16,16 +16,16 @@ ua =  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 def getNews(word):
 
     # 下記はアクセス先に合わせて修正しスクレイピング
-    # req = urllib.request.Request(url, headers={'User-Agent': ua})
-    # html = urllib.request.urlopen(req)
-    html = urllib.request.urlopen(url)
+    req = urllib.request.Request(url, headers={'User-Agent': ua})
+    html = urllib.request.urlopen(req)
+    # html = urllib.request.urlopen(url)
     soup = BeautifulSoup(html, "html.parser")
-    # main = soup.find('div', attrs={'class': 'modBody'})
-    tags = soup.find_all("h2")
-    topics = soup.find_all("div",{"class":"card"})
-    # main = soup.find('div', attrs={'class': 'content'})
+    main = soup.find('div', attrs={'class': 'modBody'})
+    # tags = soup.find_all("h2")
+    # topics = soup.find_all("div",{"class":"card"})
+    # main = s/oup.find('div', attrs={'class': 'content'})
     # topics = main.finc_all(attrs={'class':'span'})
-    # topics = main.find_all(attrs={'class': 'linkMain'})
+    topics = main.find_all(attrs={'class': 'linkMain'})
 
     # 該当記事カウント変数と結果格納リスト
     count = 0
