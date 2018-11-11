@@ -56,10 +56,16 @@ def handle_message(event):
     result = sc.getNews(word)
 
 # 応答メッセージ（記事検索結果）を送信
-    line_bot_api.reply_message(
-    event.reply_token,
-    TextSendMessage(text=result)
-    )
+    if word != "アメリカ":
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text="イタリア")
+        )  
+    else:
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=result)
+        )
 
 
 if __name__ == "__main__":
