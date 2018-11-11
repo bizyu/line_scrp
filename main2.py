@@ -63,7 +63,7 @@ categ = 'please choice category \n'\
     if word=="hello":
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=str(categ))
+        TextSendMessage(text="hello")
             )
     else:
         line_bot_api.reply_message(
