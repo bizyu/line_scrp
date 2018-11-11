@@ -59,7 +59,9 @@ def handle_message(event):
     if word=="hello":
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text="hello")
+        TextSendMessage(text="please choice category \
+            モバイル\
+            ")
             )
     else:
         line_bot_api.reply_message(
