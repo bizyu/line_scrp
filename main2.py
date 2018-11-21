@@ -83,53 +83,113 @@ def handle_message(event):
         )  
     elif word == "サイエンス":
         event.reply_token,
-        carousel_template_message = TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
-                columns=[
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.gzn.jp/img/2018/11/21/modified-virus-kill-cancer-cells/00.jpg',
-                        title='this is menu1',
-                        text='description1',
-                        actions=[
-                            PostbackAction(
-                                label='postback1',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
-                            ),
-                            MessageAction(
-                                label='message1',
-                                text='message text1'
-                            ),
-                            URIAction(
-                                label='uri1',
-                                uri='https://gigazine.net/news/20181121-modified-virus-kill-cancer-cells/'
-                            )
-                        ]
-                    ),
-                    # CarouselColumn(
-                    #     thumbnail_image_url='https://example.com/item2.jpg',
-                    #     title='this is menu2',
-                    #     text='description2',
-                    #     actions=[
-                    #         PostbackAction(
-                    #             label='postback2',
-                    #             text='postback text2',
-                    #             data='action=buy&itemid=2'
-                    #         ),
-                    #         MessageAction(
-                    #             label='message2',
-                    #             text='message text2'
-                    #         ),
-                    #         URIAction(
-                    #             label='uri2',
-                    #             uri='http://example.com/2'
-                    #         )
-                    #     ]
-                    # )
+        {
+          "type": "bubble",
+          "header": {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "text": "NEWS DIGEST",
+                "weight": "bold",
+                "color": "#aaaaaa",
+                "size": "sm"
+              }
+            ]
+          },
+          "hero": {
+            "type": "image",
+            "url": "https://i.gzn.jp/img/2018/11/21/why-not-animals-turn-zombies/00_m.jpg",
+            "size": "full",
+            "aspectRatio": "20:13",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "uri": "https://gigazine.net/news/20181121-why-not-animals-turn-zombies/"
+            }
+          },
+          "body": {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "vertical",
+                "flex": 1,
+                "contents": [
+                  {
+                    "type": "image",
+                    "url": "https://i.gzn.jp/img/2018/11/21/modified-virus-kill-cancer-cells/00_m.jpg",
+                    "aspectMode": "cover",
+                    "aspectRatio": "4:3",
+                    "size": "sm",
+                    "gravity": "bottom"
+                  }
                 ]
-            )
-        )
+              },
+              {
+                "type": "box",
+                "layout": "vertical",
+                "flex": 2,
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "7 Things to Know for Today",
+                    "gravity": "top",
+                    "size": "xs",
+                    "flex": 1
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Hay fever goes wild",
+                    "gravity": "center",
+                    "size": "xs",
+                    "flex": 2
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "LINE Pay Begins Barcode Payment Service",
+                    "gravity": "center",
+                    "size": "xs",
+                    "flex": 2
+                  },
+                  {
+                    "type": "separator"
+                  },
+                  {
+                    "type": "text",
+                    "text": "LINE Adds LINE Wallet",
+                    "gravity": "bottom",
+                    "size": "xs",
+                    "flex": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "button",
+                "action": {
+                  "type": "uri",
+                  "label": "More",
+                  "uri": "http://gigazine.net/"
+                }
+              }
+            ]
+          }
+        }
     else:
         line_bot_api.reply_message(
         event.reply_token,
