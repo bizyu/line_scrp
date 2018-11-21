@@ -83,46 +83,8 @@ def handle_message(event):
         )  
     else:
         line_bot_api.reply_message(
-        # event.reply_token,
-        # TextSendMessage(text=result)
-        {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-                {
-                    "type": "box",
-                    "layout": "baseline",
-                    "contents": [
-                        {
-                            "type": "icon",
-                            "url": "result",
-                            "size": "xl"
-                        },
-                        {
-                            "type": "text",
-                            "text": "<text>",
-                            "size": "lg"
-                        }
-                    ]
-                },
-                {
-                    "type": "box",
-                    "layout": "baseline",
-                    "contents": [
-                        {
-                            "type": "icon",
-                            "url": "result",
-                            "size": "xl"
-                        },
-                        {
-                            "type": "text",
-                            "text": "<text>",
-                            "size": "lg"
-                        }
-                    ]
-                }
-            ]
-}
+        event.reply_token,
+        TextSendMessage(text=result)
         )
 
 
