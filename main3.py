@@ -85,63 +85,13 @@ def handle_message(event):
         )  
     elif word=="items":
         line_bot_api.reply_message(
-        event.reply_token,
+        event.reply_token,{
         # ===================================================
-        {
-                "type": "flex",
-                "altText": "hogehoge",
-                "contents": {
-                    "type": "bubble",
-                    "styles": {
-                        "header": {
-                            "backgroundColor": "#ff62ae"
-                        },
-                        "body": {
-                            "backgroundColor": "#5bff54"
-                        },
-                        "footer": {
-                            "backgroundColor": "#7b78ff"
-                        }
-                    },
-                    "header": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "header"
-                            }
-                        ]
-                    },
-                    "hero": {
-                        "type": "image",
-                        "url": "https://i.gzn.jp/img/2018/11/24/cyber-terrorism-scenario/00_m.jpg",
-                        "size": "full",
-                        "aspectRatio": "1:1"
-                    },
-                    "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "body"
-                            }
-                        ]
-                    },
-                    "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                            {
-                                "type": "text",
-                                "text": "footer"
-                            }
-                        ]
-                    }
-                }
-        }
+            "type": "image",
+            "originalContentUrl": "https://i.gzn.jp/img/2018/11/24/cyber-terrorism-scenario/00_m.jpg",
+            "previewImageUrl": "https://i.gzn.jp/img/2018/11/24/cyber-terrorism-scenario/00_m.jpg"
 # ----------------------------------------------------------------
+            }
         )
 
     else:
