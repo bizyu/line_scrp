@@ -64,6 +64,12 @@ categ = "please choice categ\n" \
             "食\n"\
             "メモ"
             
+
+f = open("test.json", 'r')
+json_data = json.load(f) #JSON形式で読み込む
+
+
+
 # メッセージリプライ
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -85,13 +91,11 @@ def handle_message(event):
         )  
     elif word=="items":
         line_bot_api.reply_message(
-        event.reply_token,{
+        event.reply_token,
         # ===================================================
-            "type": "image",
-            "originalContentUrl": "https://i.gzn.jp/img/2018/11/24/cyber-terrorism-scenario/00_m.jpg",
-            "previewImageUrl": "https://i.gzn.jp/img/2018/11/24/cyber-terrorism-scenario/00_m.jpg"
+        TextSendMessage(text=str(json_data))
 # ----------------------------------------------------------------
-            }
+            
         )
 
     else:

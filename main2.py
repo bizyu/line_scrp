@@ -17,13 +17,6 @@ import json
 import sccate as sc
 
 
-import re
-import sys
-from argparse import ArgumentParser
-from re import Match
-from jinja2 import Environment, FileSystemLoader, select_autoescape
-import qiita
-
 
 app = Flask(__name__)
 
