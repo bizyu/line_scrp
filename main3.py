@@ -113,7 +113,7 @@ def handle_message(event):
                     "action": {
                       "type": "uri",
                       "label": "Go",
-                      "uri": "https://example.com"
+                      "uri": "http://gigazine.net/"
                     }
                   }
                 ]
@@ -142,7 +142,7 @@ def handle_message(event):
                     "action": {
                       "type": "uri",
                       "label": "Go",
-                      "uri": "https://example.com"
+                      "uri": "http://gigazine.net/"
                     }
                   }
                 ]
