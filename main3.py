@@ -38,14 +38,10 @@ def callback():
     app.logger.info("Request body: " + body)
 
     # handle webhook body
-    # handle webhook body
     try:
         handler.handle(body, signature)
     except InvalidSignatureError:
         abort(400)
-    except LineBotApiError as e:
-        app.logger.exception(f'LineBotApiError: {e.status_code} {e.message}', e)
-        raise e
 
     return 'OK'
 
