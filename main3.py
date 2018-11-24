@@ -36,6 +36,38 @@ line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
 
+template_env = Environment(
+    loader=FileSystemLoader('templates'),
+    autoescape=select_autoescape(['html', 'xml', 'json'])
+)
+
+
+class TextPatternHandler:
+
+    def __init__(self):
+        self.handlers = []
+
+    def add(self, pattern: str):
+        def decorator(func):
+            self.handlers.append((re.compile(pattern), func))
+            return func
+        return decorator
+
+    def handle(self, event: MessageEvent):
+
+        text = event.message.text
+
+        for pattern, func in self.handlers:
+            m = pattern.match(text)
+            if m:
+                func(event, m)
+                return True
+
+        return False
+
+
+text_pattern_handler = TextPatternHandler()
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
@@ -46,10 +78,14 @@ def callback():
     app.logger.info("Request body: " + body)
 
     # handle webhook body
+    # handle webhook body
     try:
         handler.handle(body, signature)
     except InvalidSignatureError:
         abort(400)
+    except LineBotApiError as e:
+        app.logger.exception(f'LineBotApiError: {e.status_code} {e.message}', e)
+        raise e
 
     return 'OK'
 
@@ -76,28 +112,41 @@ categ = "please choice categ\n" \
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-    # ユーザからの検索ワードを取得
-    word = event.message.text
+    try:
+        # ユーザー入力event
+        replied = text_pattern_handler.handle(event)
 
-    # 記事取得関数を呼び出し
-    result = sc.getNews(word)
+        if not replied:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage('ちょっと何言ってるかわからない')
+            )
 
-
-
-#この後おすすめでpv数から記事取得
-# 応答メッセージ（記事検索結果）を送信
-    if word == "hello":
+    except Exception:
         line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=str(categ))
-        )  
-        
-    else:
-        line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=result)
+            event.reply_token,
+            TextSendMessage('エラーです')
         )
+        raise
 
+@text_pattern_handler.add(pattern=r'^items$')
+def reply_items(event: MessageEvent, match: Match):
+
+    items = qiita.get_items(10)
+    # 表示のテンプレトをディレクトリから取得
+    template = template_env.get_template('items.json')
+    data = template.render(dict(items=items))
+
+    print(data)
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        FlexSendMessage(
+            alt_text="items",
+            # dataを入力してカルーセルで応答
+            contents=CarouselContainer.new_from_json_dict(json.loads(data))
+        )
+    )
 
 if __name__ == "__main__":
 #    app.run()
