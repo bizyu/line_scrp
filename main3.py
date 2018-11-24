@@ -65,10 +65,6 @@ categ = "please choice categ\n" \
             "メモ"
             
 
-f = open("hello.json")
-# json_data = json.load(f) #JSON形式で読み込む
-
-
 
 # メッセージリプライ
 @handler.add(MessageEvent, message=TextMessage)
@@ -90,13 +86,24 @@ def handle_message(event):
         TextSendMessage(text=str(categ))
         )  
     elif word=="items":
+        f = open("test.json", 'r')
+        data = json.load(f) #JSON形式で読み込む
+        # name_list = ["honoka","eri","kotori","umi","rin","maki","nozomi","hanayo","niko"]
+        # for name in name_list:
+        #     print("{0:6s} 身長：{1}cm BWH: ".format(name,json_data[name]["height"]),end="\t")
+        #     for i in range(len(json_data[name]["BWH"])):
+        #         print("{}".format(json_data[name]["BWH"][i]),end="\t")
+        #     print()
+
+
+
         line_bot_api.reply_message(
         event.reply_token,
         # ===================================================
         FlexSendMessage(
             alt_text="items",
             # dataを入力してカルーセルで応答
-            contents=BubbleContainer.new_from_json_dict(json.loads(f))
+            contents=BubbleContainer.new_from_json_dict(json.loads(data))
         )
 # ----------------------------------------------------------------
             

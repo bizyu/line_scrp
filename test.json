@@ -1,9 +1,40 @@
 {
-    "honoka": {
-        "BWH": [
-            78,
-            58,
-            82
-        ],
-        "height": 157
+  "type": "bubble",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Header text"
+      }
+    ]
+  },
+  "hero": {
+    "type": "image",
+    "url": "https://i.gzn.jp/img/2018/11/24/cyber-terrorism-scenario/00_m.jpg"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Body text"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "Footer text"
+      }
+    ]
+  },
+  "styles": {
+    "comment": "See the example of a bubble style object"
+  }
 }
