@@ -27,7 +27,6 @@ line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
 
-text_pattern_handler = TextPatternHandler()
 
 @app.route("/callback", methods=['POST'])
 def callback():
