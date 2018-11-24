@@ -66,7 +66,7 @@ categ = "please choice categ\n" \
             
 
 f = open("hello.json")
-# json_data = json.load(f) #JSON形式で読み込む
+json_data = json.load(f) #JSON形式で読み込む
 
 
 
@@ -93,7 +93,7 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         # ===================================================
-        TextSendMessage(text=f)
+        TextSendMessage(text=json_data)
 # ----------------------------------------------------------------
             
         )
