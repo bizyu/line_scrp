@@ -88,67 +88,58 @@ def handle_message(event):
         event.reply_token,
         # ===================================================
         {
-          "type": "carousel",
-          "contents": [
-            {
-              "type": "bubble",
-              "body": {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "wrap": true
-                  }
-                ]
-              },
-              "footer": {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  {
-                    "type": "button",
-                    "style": "primary",
-                    "action": {
-                      "type": "uri",
-                      "label": "Go",
-                      "uri": "http://gigazine.net/"
+                "type": "flex",
+                "altText": "hogehoge",
+                "contents": {
+                    "type": "bubble",
+                    "styles": {
+                        "header": {
+                            "backgroundColor": "#ff62ae"
+                        },
+                        "body": {
+                            "backgroundColor": "#5bff54"
+                        },
+                        "footer": {
+                            "backgroundColor": "#7b78ff"
+                        }
+                    },
+                    "header": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "header"
+                            }
+                        ]
+                    },
+                    "hero": {
+                        "type": "image",
+                        "url": "https://i.gzn.jp/img/2018/11/24/cyber-terrorism-scenario/00_m.jpg",
+                        "size": "full",
+                        "aspectRatio": "1:1"
+                    },
+                    "body": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "body"
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "footer"
+                            }
+                        ]
                     }
-                  }
-                ]
-              }
-            },
-            {
-              "type": "bubble",
-              "body": {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "Hello, World!",
-                    "wrap": true
-                  }
-                ]
-              },
-              "footer": {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  {
-                    "type": "button",
-                    "style": "primary",
-                    "action": {
-                      "type": "uri",
-                      "label": "Go",
-                      "uri": "http://gigazine.net/"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
+                }
         }
 # ----------------------------------------------------------------
         )
