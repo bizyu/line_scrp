@@ -8,7 +8,7 @@ from linebot.exceptions import (
 )
 from linebot.models import (
     MessageEvent, TextMessage,
-    FlexSendMessage, BubbleContainer, CarouselContainer, TextSendMessage
+    FlexSendMessage, BubbleContainer, CarouselContainer
 )
 
 import urllib.request
@@ -66,7 +66,7 @@ categ = "please choice categ\n" \
             
 
 f = open("hello.json")
-json_data = json.load(f) #JSON形式で読み込む
+# json_data = json.load(f) #JSON形式で読み込む
 
 
 
@@ -93,7 +93,11 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         # ===================================================
-        TextSendMessage(text=json_data)
+        FlexSendMessage(
+            alt_text="items",
+            # dataを入力してカルーセルで応答
+            contents=BubbleContainer.new_from_json_dict(json.loads(f))
+        )
 # ----------------------------------------------------------------
             
         )
