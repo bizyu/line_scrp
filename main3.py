@@ -86,7 +86,7 @@ def handle_message(event):
         TextSendMessage(text=str(categ))
         )  
     elif word=="items":
-        f = open("test.json", 'r')
+        f = open("test.json")
         data = json.load(f) #JSON形式で読み込む
         # name_list = ["honoka","eri","kotori","umi","rin","maki","nozomi","hanayo","niko"]
         # for name in name_list:
