@@ -65,7 +65,7 @@ categ = "please choice categ\n" \
             "メモ"
             
 
-f = open("test.json", 'r')
+f = open("test.json")
 json_data = json.load(f) #JSON形式で読み込む
 
 
