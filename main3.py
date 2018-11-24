@@ -96,7 +96,7 @@ def handle_message(event):
         )  
     elif word=="items":
         template = template_env.get_template('test.json')
-        data = template.render(dict(items=items))
+        data = template.render(dict(items=test))
         # name_list = ["honoka","eri","kotori","umi","rin","maki","nozomi","hanayo","niko"]
         # for name in name_list:
         #     print("{0:6s} 身長：{1}cm BWH: ".format(name,json_data[name]["height"]),end="\t")
