@@ -16,15 +16,6 @@ import os
 import json
 import sccate as sc
 
-
-import re
-import sys
-from argparse import ArgumentParser
-from re import Match
-from jinja2 import Environment, FileSystemLoader, select_autoescape
-import qiita
-
-
 app = Flask(__name__)
 
 
@@ -34,36 +25,6 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
-
-
-template_env = Environment(
-    loader=FileSystemLoader('templates'),
-    autoescape=select_autoescape(['html', 'xml', 'json'])
-)
-
-
-class TextPatternHandler:
-
-    def __init__(self):
-        self.handlers = []
-
-    def add(self, pattern: str):
-        def decorator(func):
-            self.handlers.append((re.compile(pattern), func))
-            return func
-        return decorator
-
-    def handle(self, event: MessageEvent):
-
-        text = event.message.text
-
-        for pattern, func in self.handlers:
-            m = pattern.match(text)
-            if m:
-                func(event, m)
-                return True
-
-        return False
 
 
 text_pattern_handler = TextPatternHandler()
@@ -112,41 +73,97 @@ categ = "please choice categ\n" \
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 
-    try:
-        # ユーザー入力event
-        replied = text_pattern_handler.handle(event)
+    # ユーザからの検索ワードを取得
+    word = event.message.text
 
-        if not replied:
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage('ちょっと何言ってるかわからない')
-            )
+    # 記事取得関数を呼び出し
+    result = sc.getNews(word)
 
-    except Exception:
+
+
+#この後おすすめでpv数から記事取得
+# 応答メッセージ（記事検索結果）を送信
+    if word == "hello":
         line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage('エラーです')
-        )
-        raise
-
-@text_pattern_handler.add(pattern=r'^items$')
-def reply_items(event: MessageEvent, match: Match):
-
-    items = qiita.get_items(10)
-    # 表示のテンプレトをディレクトリから取得
-    template = template_env.get_template('items.json')
-    data = template.render(dict(items=items))
-
-    print(data)
-
-    line_bot_api.reply_message(
         event.reply_token,
-        FlexSendMessage(
-            alt_text="items",
-            # dataを入力してカルーセルで応答
-            contents=CarouselContainer.new_from_json_dict(json.loads(data))
+        TextSendMessage(text=str(categ))
+        )  
+    elif word=="items":
+        line_bot_api.reply_message(
+        event.reply_token,
+        # ===================================================
+        {
+          "type": "carousel",
+          "contents": [
+            {
+              "type": "bubble",
+              "body": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "wrap": true
+                  }
+                ]
+              },
+              "footer": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "style": "primary",
+                    "action": {
+                      "type": "uri",
+                      "label": "Go",
+                      "uri": "https://example.com"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "bubble",
+              "body": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "Hello, World!",
+                    "wrap": true
+                  }
+                ]
+              },
+              "footer": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "button",
+                    "style": "primary",
+                    "action": {
+                      "type": "uri",
+                      "label": "Go",
+                      "uri": "https://example.com"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+# ----------------------------------------------------------------
         )
-    )
+
+    else:
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=result)
+        )
+
 
 if __name__ == "__main__":
 #    app.run()
