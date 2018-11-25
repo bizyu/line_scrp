@@ -12,70 +12,68 @@ url = "http://gigazine.net/"
 
 
 code ={
-  "type": "carousel",
-  "contents": [
-    {
-      "type": "bubble",
-      "body": {
-        "type": "box",
-        "layout": "horizontal",
+        "type": "carousel",
         "contents": [
           {
-            "type": "text",
-            # // "text"にgigazine記事タイトルを表示
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "wrap": "true"
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
+            "type": "bubble",
+            "body": {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                  "wrap": "true"
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "action": {
+                    "type": "uri",
+                    "label": "Go",
+                    "uri": "https://qiita.com/unbabel/items/1cf05f2a2be3d6fb3388"
+                  }
+                }
+              ]
+            }
+          },
           {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Go",
-              # // 以下urlに記事リンクを張る
-              "uri": url
+            "type": "bubble",
+            "body": {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "Hello, World!",
+                  "wrap": "true"
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "horizontal",
+              "contents": [
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "action": {
+                    "type": "uri",
+                    "label": "Go",
+                    "uri": "https://qiita.com/unbabel/items/1cf05f2a2be3d6fb3388"
+                  }
+                }
+              ]
             }
           }
         ]
       }
-    },
-    {
-      "type": "bubble",
-      "body": {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "text",
-            "text": "Hello, World!",
-            "wrap": "true"
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Go",
-              "uri": "https://gigazine.net/news/20181124-cyber-terrorism-scenario/"
-            }
-          }
-        ]
-      }
-    }
-  ]
-}
 
 
 f = open('templates/j1.json', 'w')
