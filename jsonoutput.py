@@ -9,9 +9,7 @@ url = "http://gigazine.net/"
 # soup = BeautifulSoup(response, 'html.parser')
 # tagtag = soup.find_all("div",{"class":"card"})
 
-
-
-code ={
+code ="""{
         "type": "carousel",
         "contents": [
           {
@@ -23,7 +21,7 @@ code ={
                 {
                   "type": "text",
                   "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                  "wrap": "true"
+                  "wrap": true
                 }
               ]
             },
@@ -52,7 +50,7 @@ code ={
                 {
                   "type": "text",
                   "text": "Hello, World!",
-                  "wrap": "true"
+                  "wrap": true
                 }
               ]
             },
@@ -74,8 +72,10 @@ code ={
           }
         ]
       }
-
+"""
 
 f = open('templates/j1.json', 'w')
-# json_dict=json.load(f)
-json.dump(code,f,indent=4)
+# # json_dict=json.load(f)
+# json.dump(code,f,indent=4)
+
+f.write(str(code))
