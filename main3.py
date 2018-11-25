@@ -58,20 +58,7 @@ categ = "please choice categ\n" \
             "モバイル\n"\
             "ソフトウェア\n"\
             "ネットサービス\n"\
-            "ウェブアプリ\n"\
-            "ハードウェア\n"\
-            "乗り物\n"\
-            "サイエンス\n"\
-            "生き物\n"\
-            "動画\n"\
-            "映画\n"\
-            "マンガ\n"\
-            "アニメ\n"\
-            "ゲーム\n"\
-            "デザイン\n"\
-            "アート\n"\
-            "食\n"\
-            "メモ"
+            "ウェブアプリ\n"
             
 
 
@@ -96,15 +83,8 @@ def handle_message(event):
         )  
     elif word=="items":
         les="les"
-        template = template_env.get_template('test.json')
+        template = template_env.get_template('test2.json')
         data = template.render(dict(items=les))
-        # name_list = ["honoka","eri","kotori","umi","rin","maki","nozomi","hanayo","niko"]
-        # for name in name_list:
-        #     print("{0:6s} 身長：{1}cm BWH: ".format(name,json_data[name]["height"]),end="\t")
-        #     for i in range(len(json_data[name]["BWH"])):
-        #         print("{}".format(json_data[name]["BWH"][i]),end="\t")
-        #     print()
-
 
 
         line_bot_api.reply_message(
@@ -113,7 +93,7 @@ def handle_message(event):
         FlexSendMessage(
             alt_text="items",
             # dataを入力してカルーセルで応答
-            contents=BubbleContainer.new_from_json_dict(json.loads(data))
+            contents=CarouselContainer.new_from_json_dict(json.loads(data))
         )
 # ----------------------------------------------------------------
             
