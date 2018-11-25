@@ -11,12 +11,14 @@ from linebot.models import (
     FlexSendMessage, BubbleContainer, CarouselContainer, TextSendMessage
 )
 
+
 import urllib.request
 import os
 import json
 import sccate as sc
 
 
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 app = Flask(__name__)
 
