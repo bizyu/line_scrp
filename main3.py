@@ -92,7 +92,8 @@ def handle_message(event):
         )  
     elif word=="items":
         les="les"
-        template = template_env.get_template('test2.json')
+        # template = template_env.get_template('test2.json')
+        template = template_env.get_template('j1.json')
         data = template.render(dict(items=les))
 
 
