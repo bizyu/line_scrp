@@ -9,6 +9,7 @@
         "contents": [
           {
             "type": "text",
+            // "text"にgigazine記事タイトルを表示
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "wrap": true
           }
@@ -24,6 +25,7 @@
             "action": {
               "type": "uri",
               "label": "Go",
+              // 以下urlに記事リンクを張る
               "uri": "https://gigazine.net/news/20181124-cyber-terrorism-scenario/"
             }
           }

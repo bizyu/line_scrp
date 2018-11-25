@@ -73,42 +73,11 @@ code ={
           }
         ]
       }
-    },    {
-      "type": "bubble",
-      "body": {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "text",
-            # // "text"にgigazine記事タイトルを表示
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "wrap": "true"
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "horizontal",
-        "contents": [
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Go",
-              # // 以下urlに記事リンクを張る
-              "uri": url
-            }
-          }
-        ]
-      }
     }
-    # 
   ]
 }
 
 
-f = open('j1.json', 'w')
+f = open('templates/j1.json', 'w')
 # json_dict=json.load(f)
 json.dump(code,f,indent=4)
