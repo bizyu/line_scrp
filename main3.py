@@ -8,7 +8,7 @@ from linebot.exceptions import (
 )
 from linebot.models import (
     MessageEvent, TextMessage,
-    FlexSendMessage, BubbleContainer, CarouselContainer
+    FlexSendMessage, BubbleContainer, CarouselContainer, TextSendMessage
 )
 
 import urllib.request
@@ -17,7 +17,6 @@ import json
 import sccate as sc
 
 
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 app = Flask(__name__)
 
@@ -29,13 +28,6 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
-
-# -----------------
-template_env = Environment(
-    loader=FileSystemLoader('templates'),
-    autoescape=select_autoescape(['html', 'xml', 'json'])
-)
-# -----------------
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -73,8 +65,6 @@ categ = "please choice categ\n" \
             "食\n"\
             "メモ"
             
-
-
 # メッセージリプライ
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -96,15 +86,8 @@ def handle_message(event):
         )  
     elif word=="items":
         les="les"
-        template = template_env.get_template('test.json')
+        template = template_env.get_template('test2.json')
         data = template.render(dict(items=les))
-        # name_list = ["honoka","eri","kotori","umi","rin","maki","nozomi","hanayo","niko"]
-        # for name in name_list:
-        #     print("{0:6s} 身長：{1}cm BWH: ".format(name,json_data[name]["height"]),end="\t")
-        #     for i in range(len(json_data[name]["BWH"])):
-        #         print("{}".format(json_data[name]["BWH"][i]),end="\t")
-        #     print()
-
 
 
         line_bot_api.reply_message(
@@ -113,10 +96,9 @@ def handle_message(event):
         FlexSendMessage(
             alt_text="items",
             # dataを入力してカルーセルで応答
-            contents=BubbleContainer.new_from_json_dict(json.loads(data))
-        )
+            contents=CarouselContainer.new_from_json_dict(json.loads(data))
+            )
 # ----------------------------------------------------------------
-            
         )
 
     else:
