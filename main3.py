@@ -8,7 +8,7 @@ from linebot.exceptions import (
 )
 from linebot.models import (
     MessageEvent, TextMessage,
-    FlexSendMessage, BubbleContainer, CarouselContainer
+    FlexSendMessage, BubbleContainer, CarouselContainer, TextSendMessage
 )
 
 import urllib.request
@@ -17,7 +17,6 @@ import json
 import sccate as sc
 
 
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 app = Flask(__name__)
 
@@ -29,13 +28,6 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
-
-# -----------------
-template_env = Environment(
-    loader=FileSystemLoader('templates'),
-    autoescape=select_autoescape(['html', 'xml', 'json'])
-)
-# -----------------
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -58,10 +50,21 @@ categ = "please choice categ\n" \
             "モバイル\n"\
             "ソフトウェア\n"\
             "ネットサービス\n"\
-            "ウェブアプリ"
+            "ウェブアプリ\n"\
+            "ハードウェア\n"\
+            "乗り物\n"\
+            "サイエンス\n"\
+            "生き物\n"\
+            "動画\n"\
+            "映画\n"\
+            "マンガ\n"\
+            "アニメ\n"\
+            "ゲーム\n"\
+            "デザイン\n"\
+            "アート\n"\
+            "食\n"\
+            "メモ"
             
-
-
 # メッセージリプライ
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -94,9 +97,8 @@ def handle_message(event):
             alt_text="items",
             # dataを入力してカルーセルで応答
             contents=CarouselContainer.new_from_json_dict(json.loads(data))
-        )
+            )
 # ----------------------------------------------------------------
-            
         )
 
     else:
