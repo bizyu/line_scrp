@@ -78,4 +78,4 @@ f = open('templates/j1.json', 'w')
 # # json_dict=json.load(f)
 json.dump(code,f,indent=4)
 
-f.write(str(code))
+# f.write(str(code))
