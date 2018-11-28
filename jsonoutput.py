@@ -5,9 +5,10 @@ import json
 
 url = "http://gigazine.net/"
 
-# response = requests.get(url).text
-# soup = BeautifulSoup(response, 'html.parser')
+response = requests.get(url).text
+soup = BeautifulSoup(response, 'html.parser')
 # tagtag = soup.find_all("div",{"class":"card"})
+logo=soup.find(svg)
 
 
 code ="""{
