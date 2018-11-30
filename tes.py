@@ -34,15 +34,16 @@ def rank(word):
 			getcnt = soup3.find('div',{'class':'cntimage'})
 			getimg = getcnt.find('img').get('src')
 			# print(getimg)
-			list.append([gett,getu,getimg])
+			list.append([gett,url3,getimg])
 
 	# for i in range(ranklist):
 	# 	for i in range(0,int(len(result))):
 	# 		print(result[i][0],result[i][1],"\n")
-	list=[str(i) for i in list]
-	result = '\n'.join(list)
-	return result
+	# list=[str(i) for i in list]
+	# result = '\n'.join(list)
+	return list
 
-# result=rank("人気記事")
-# for i in range(0,int(len(result))):
-# 	print(result[i][2],"\n")
+result=rank("人気記事")
+for arr in result:
+	print(arr[1])
+	# print(result[i][2],"\n")
