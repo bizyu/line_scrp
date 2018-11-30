@@ -73,7 +73,7 @@ categ = "please choice categ\n" \
             "メモ"
             
 # make.pyまでのpath
-path = "make.py"
+path = "templates/make.py"
 
 # カルーセル
 # メッセージリプライ
