@@ -416,4 +416,6 @@ def makejson(word):
       json.dump(code,f,indent=4)
       # f.write(str(code))
 
-      return
+      return 'OK'
+
+makejson("人気記事")
