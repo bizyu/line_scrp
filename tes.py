@@ -19,7 +19,7 @@ def rank(word):
 		html2 = urllib.request.urlopen(url2)
 		soup2 = BeautifulSoup(html2, "lxml")
 
-		result=[]
+		list=[]
 		rank = soup2.find('div',id='ranking-entry')
 		rankli=rank.find_all('a')
 
@@ -34,12 +34,13 @@ def rank(word):
 			getcnt = soup3.find('div',{'class':'cntimage'})
 			getimg = getcnt.find('img').get('src')
 			# print(getimg)
-			result.append([gett,getu,getimg])
+			list.append([gett,getu,getimg])
 
 	# for i in range(ranklist):
 	# 	for i in range(0,int(len(result))):
 	# 		print(result[i][0],result[i][1],"\n")
-	
+	list=[str(i) for i in list]
+	result = '\n'.join(list)
 	return result
 
 # result=rank("人気記事")
