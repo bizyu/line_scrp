@@ -414,5 +414,4 @@ f = open("templates/temp.json",'w')
 
 # json.dict=json.load(f)
 json.dump(code,f,indent=4)
-f.write(str(code)
-      
+f.write(str(code))
