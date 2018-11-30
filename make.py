@@ -413,6 +413,6 @@ code = {
 f = open("templates/temp.json",'w')
 
 # json.dict=json.load(f)
-json.dump(str(code),f,indent=4)
-# f.write(str(code))
+json.dump(code,f,indent=4)
+f.write(str(code)
       
