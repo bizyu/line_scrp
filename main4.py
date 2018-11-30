@@ -12,6 +12,7 @@ from linebot.models import (
 )
 
 
+import subprocess
 import urllib.request
 import os
 import json
