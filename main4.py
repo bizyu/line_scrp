@@ -33,7 +33,7 @@ line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
 template_env = Environment(
-    loader=FileSystemLoader('templates'),
+    # loader=FileSystemLoader('templates'),
     autoescape=select_autoescape(['html', 'xml', 'json'])
 )
 
@@ -95,7 +95,7 @@ def handle_message(event):
     elif word=="人気記事":
         les="les"
         # template = template_env.get_template('test2.json')
-        template = template_env.get_template('templates/temp.json')
+        template = template_env.get_template('temp.json')
         # template = "temp.json"
         data = template.render(dict(items=les))
 
