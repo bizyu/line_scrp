@@ -86,7 +86,7 @@ def handle_message(event):
     # 記事取得関数を呼び出し
     result = tes.rank(word)
 
-    subprocess.call("python %s" % path)
+    subprocess.call(path)
 
 
 #この後おすすめでpv数から記事取得
