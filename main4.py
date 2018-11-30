@@ -16,6 +16,7 @@ import urllib.request
 import os
 import json
 import sccate as sc
+import tes
 
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -83,8 +84,11 @@ def handle_message(event):
     word = event.message.text
 
     # 記事取得関数を呼び出し
-    result = tes.rank(word)
-    subprocess.check_call(['python','make.py'])
+    if word !="人気記事":
+        result = sc.getNews(word)
+    else:
+        result = tes.rank(word)
+        subprocess.check_call(['python','make.py'])
 
 
 #この後おすすめでpv数から記事取得
