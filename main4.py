@@ -16,7 +16,7 @@ import urllib.request
 import os
 import json
 import tes
-import make
+from templates import make
 
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
