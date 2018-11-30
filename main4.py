@@ -71,6 +71,10 @@ categ = "please choice categ\n" \
             "食\n"\
             "メモ"
             
+
+
+
+# カルーセル
 # メッセージリプライ
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -79,7 +83,7 @@ def handle_message(event):
     word = event.message.text
 
     # 記事取得関数を呼び出し
-    result = sc.getNews(word)
+    result = tes.rank(word)
 
 
 
@@ -93,7 +97,7 @@ def handle_message(event):
     elif word=="人気記事":
         les="les"
         # template = template_env.get_template('test2.json')
-        template = template_env.get_template('j1.json')
+        template = template_env.get_template('temp.json')
         data = template.render(dict(items=les))
 
 
