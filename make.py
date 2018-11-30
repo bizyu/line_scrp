@@ -409,8 +409,8 @@ code = {
 }
 
 
+f = open("temp.json",'w')
 # f = open("templates/temp.json",'w')
-f = open("templates/temp.json",'w')
 
 # json.dict=json.load(f)
 json.dump(code,f,indent=4)
