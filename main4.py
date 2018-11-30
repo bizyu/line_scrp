@@ -97,7 +97,7 @@ def handle_message(event):
         # template = template_env.get_template('test2.json')
         template = template_env.get_template('temp.json')
         # template = "temp.json"
-        data = template.render(dict(items=les))
+        # data = template.render(dict(items=les))
 
 
         line_bot_api.reply_message(
@@ -106,7 +106,7 @@ def handle_message(event):
         FlexSendMessage(
             alt_text="items",
             # dataを入力してカルーセルで応答
-            contents=CarouselContainer.new_from_json_dict(json.loads(data))
+            contents=CarouselContainer.new_from_json_dict(json.loads(template))
             )
 # ----------------------------------------------------------------
         )
