@@ -11,12 +11,12 @@ from linebot.models import (
     FlexSendMessage, BubbleContainer, CarouselContainer, TextSendMessage
 )
 
-
+import subprocess
 import urllib.request
 import os
 import json
-import sccate as sc
 import tes
+import make
 
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -72,8 +72,8 @@ categ = "please choice categ\n" \
             "食\n"\
             "メモ"
             
-
-
+# make.pyまでのpath
+path = "make.py"
 
 # カルーセル
 # メッセージリプライ
@@ -86,6 +86,7 @@ def handle_message(event):
     # 記事取得関数を呼び出し
     result = tes.rank(word)
 
+    subprocess.call("python %s" % path)
 
 
 #この後おすすめでpv数から記事取得
