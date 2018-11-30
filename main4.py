@@ -82,7 +82,7 @@ def handle_message(event):
         result = sc.getNews(word)
     else:
         result = tes.rank(word)
-        # subprocess.check_call(['python','make.py'])
+        subprocess.check_call(['python','make.py'])
 
 
 #この後おすすめでpv数から記事取得
@@ -101,13 +101,13 @@ def handle_message(event):
 
 
         line_bot_api.reply_message(
-        event.reply_token,TextSendMessage(text=result)
+        event.reply_token,
         # ===================================================
-        # FlexSendMessage(
-        #     alt_text="items",
-        #     # dataを入力してカルーセルで応答
-        #     contents=CarouselContainer.new_from_json_dict(json.loads(data))
-        #     )
+        FlexSendMessage(
+            alt_text="items",
+            # dataを入力してカルーセルで応答
+            contents=CarouselContainer.new_from_json_dict(json.loads(data))
+            )
 # ----------------------------------------------------------------
         )
 
