@@ -16,6 +16,7 @@ import urllib.request
 import os
 import json
 import sccate as sc
+import tes
 
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
