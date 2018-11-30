@@ -64,13 +64,6 @@ categ = "please choice categ\n" \
             "サイエンス\n"\
             "生き物\n"\
             "動画\n"\
-            "映画\n"\
-            "マンガ\n"\
-            "アニメ\n"\
-            "ゲーム\n"\
-            "デザイン\n"\
-            "アート\n"\
-            "食\n"\
             "メモ"
             
 
@@ -102,8 +95,8 @@ def handle_message(event):
     elif word=="人気記事":
         les="les"
         # template = template_env.get_template('test2.json')
-        # template = template_env.get_template('temp.json')
-        template = "temp.json"
+        template = template_env.get_template('templates/temp.json')
+        # template = "temp.json"
         data = template.render(dict(items=les))
 
 
