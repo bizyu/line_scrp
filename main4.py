@@ -33,7 +33,7 @@ line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
 template_env = Environment(
-    # loader=FileSystemLoader('templates'),
+    loader=FileSystemLoader('templates'),
     autoescape=select_autoescape(['html', 'xml', 'json'])
 )
 
