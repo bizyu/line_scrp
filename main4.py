@@ -82,7 +82,7 @@ def handle_message(event):
         result = sc.getNews(word)
     else:
         result = tes.rank(word)
-        subprocess.check_call(['python','make.py'])
+        # subprocess.check_call(['python','make.py'])
 
 
 #この後おすすめでpv数から記事取得
