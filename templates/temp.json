@@ -18,13 +18,13 @@
             },
             "hero": {
                 "type": "image",
-                "url": "https://i.gzn.jp/img/2018/11/28/how-melt-gold-room-temperature/00_m.jpg",
+                "url": "https://i.gzn.jp/img/2018/11/30/china-deny-gene-edited-babies/00.jpg",
                 "size": "full",
                 "aspectRatio": "20:13",
                 "aspectMode": "cover",
                 "action": {
                     "type": "uri",
-                    "uri": "/news/20181128-how-melt-gold-room-temperature/"
+                    "uri": "http://gigazine.net/news/20181130-china-deny-gene-edited-babies/"
                 }
             },
             "body": {
@@ -44,7 +44,7 @@
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "\u5e38\u6e29\u3067\u6eb6\u3051\u308b\u306f\u305a\u306e\u306a\u3044\u300c\u91d1\u300d\u3092\u5ba4\u6e29\u3067\u3082\u7c21\u5358\u306b\u6eb6\u304b\u3059\u65b9\u6cd5\u304c\u767a\u898b\u3055\u308c\u308b",
+                                        "text": "中国政府が「世界初の遺伝子編集ベビーの誕生」を主張する科学者チームに研究中止を命令",
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",
@@ -101,7 +101,7 @@
                 "aspectMode": "cover",
                 "action": {
                     "type": "uri",
-                    "uri": "/news/20181129-big-cow-reason/"
+                    "uri": "http://gigazine.net/news/20181129-big-cow-reason/"
                 }
             },
             "body": {
@@ -121,7 +121,7 @@
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "\u300c\u5de8\u5927\u3059\u304e\u3066\u98df\u8089\u51e6\u7406\u5834\u306b\u65ad\u3089\u308c\u305f\u725b\u300d\u306f\u306a\u305c\u3053\u3093\u306a\u306b\u3082\u5de8\u5927\u306b\u306a\u3063\u305f\u306e\u304b\uff1f",
+                                        "text": "「巨大すぎて食肉処理場に断られた牛」はなぜこんなにも巨大になったのか？",
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",
@@ -172,13 +172,13 @@
             },
             "hero": {
                 "type": "image",
-                "url": "https://i.gzn.jp/img/2018/11/29/headline/00.jpg",
+                "url": "https://i.gzn.jp/img/2018/11/30/mitochondrial-dna-passed-through-fathers/00.jpg",
                 "size": "full",
                 "aspectRatio": "20:13",
                 "aspectMode": "cover",
                 "action": {
                     "type": "uri",
-                    "uri": "/news/20181129-headline/"
+                    "uri": "http://gigazine.net/news/20181130-mitochondrial-dna-passed-through-fathers/"
                 }
             },
             "body": {
@@ -198,84 +198,7 @@
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "2018\u5e7411\u670829\u65e5\u306e\u30d8\u30c3\u30c9\u30e9\u30a4\u30f3\u30cb\u30e5\u30fc\u30b9",
-                                        "color": "#666666",
-                                        "weight": "bold",
-                                        "size": "sm",
-                                        "flex": 5
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            "footer": {
-                "type": "box",
-                "layout": "vertical",
-                "spacing": "sm",
-                "contents": [
-                    {
-                        "type": "button",
-                        "style": "secondary",
-                        "action": {
-                            "type": "uri",
-                            "label": "MORE",
-                            "uri": "https://gigazine.net/"
-                        }
-                    },
-                    {
-                        "type": "spacer",
-                        "size": "sm"
-                    }
-                ],
-                "flex": 0
-            }
-        },
-        {
-            "type": "bubble",
-            "header": {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                    {
-                        "type": "text",
-                        "text": "GIGAZINE ranking",
-                        "weight": "bold",
-                        "color": "#000000",
-                        "size": "xl"
-                    }
-                ]
-            },
-            "hero": {
-                "type": "image",
-                "url": "https://i.gzn.jp/img/2018/11/28/how-melt-gold-room-temperature/00_m.jpg",
-                "size": "full",
-                "aspectRatio": "20:13",
-                "aspectMode": "cover",
-                "action": {
-                    "type": "uri",
-                    "uri": "http://linecorp.com/"
-                }
-            },
-            "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                    {
-                        "type": "box",
-                        "layout": "vertical",
-                        "margin": "lg",
-                        "spacing": "sm",
-                        "contents": [
-                            {
-                                "type": "box",
-                                "layout": "baseline",
-                                "spacing": "sm",
-                                "contents": [
-                                    {
-                                        "type": "text",
-                                        "text": "\u5e38\u6e29\u3067\u6eb6\u3051\u308b\u306f\u305a\u306e\u306a\u3044\u300c\u91d1\u300d\u3092\u5ba4\u6e29\u3067\u3082\u7c21\u5358\u306b\u6eb6\u304b\u3059\u65b9\u6cd5\u304c\u767a\u898b\u3055\u308c\u308b",
+                                        "text": "父親由来のミトコンドリアDNAが発見され、「ミトコンドリア・イブ」が覆る可能性が示される",
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",
@@ -352,7 +275,84 @@
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "\u5e38\u6e29\u3067\u6eb6\u3051\u308b\u306f\u305a\u306e\u306a\u3044\u300c\u91d1\u300d\u3092\u5ba4\u6e29\u3067\u3082\u7c21\u5358\u306b\u6eb6\u304b\u3059\u65b9\u6cd5\u304c\u767a\u898b\u3055\u308c\u308b",
+                                        "text": "常温で溶けるはずのない「金」を室温でも簡単に溶かす方法が発見される",
+                                        "color": "#666666",
+                                        "weight": "bold",
+                                        "size": "sm",
+                                        "flex": 5
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "action": {
+                            "type": "uri",
+                            "label": "MORE",
+                            "uri": "https://gigazine.net/"
+                        }
+                    },
+                    {
+                        "type": "spacer",
+                        "size": "sm"
+                    }
+                ],
+                "flex": 0
+            }
+        },
+        {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "GIGAZINE ranking",
+                        "weight": "bold",
+                        "color": "#000000",
+                        "size": "xl"
+                    }
+                ]
+            },
+            "hero": {
+                "type": "image",
+                "url": "https://i.gzn.jp/img/2018/11/28/how-melt-gold-room-temperature/00_m.jpg",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover",
+                "action": {
+                    "type": "uri",
+                    "uri": "http://linecorp.com/"
+                }
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "lg",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "常温で溶けるはずのない「金」を室温でも簡単に溶かす方法が発見される",
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",

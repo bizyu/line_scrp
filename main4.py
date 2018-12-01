@@ -38,7 +38,7 @@ template_env = Environment(
 )
 
 ranklis=tes.rank("人気記事")
-# subprocess.check_call(['python','make.py'])
+subprocess.check_call(['python','make.py'])
 
 @app.route("/callback", methods=['POST'])
 def callback():

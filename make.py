@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
 import urllib.request
 from bs4 import BeautifulSoup
 import json
 import requests
 import tes
+import codecs
 
 
 result = tes.rank("人気記事")
@@ -410,8 +412,10 @@ code = {
 
 
 # f = open("temp.json",'w')
-f = open("templates/temp.json",'w')
+# f = open("templates/temp.json",'w')
+f = codecs.open('templates/temp.json', 'w','utf-8')
 
-# json.dict=json.load(f)
-json.dump(code,f,indent=4)
-f.write(str(code))
+# json_data=json.load(f)
+json.dump(code,f, ensure_ascii=False,indent=4)
+# f.write(str(code))
+f.close()

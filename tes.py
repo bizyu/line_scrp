@@ -43,7 +43,7 @@ def rank(word):
 	# result = '\n'.join(list)
 	return list
 
-result=rank("人気記事")
-for arr in result:
-	print(arr[1])
+# result=rank("人気記事")
+# for arr in result:
+# 	print(arr[1])
 	# print(result[i][2],"\n")
