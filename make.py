@@ -10,87 +10,86 @@ import codecs
 result = tes.rank("人気記事")
 
 code = {
-"type": "carousel",
-"contents": [
-  {
-"type": "bubble",
-"header": {
-  "type": "box",
-  "layout": "horizontal",
+  "type": "carousel",
   "contents": [
-    {
-      "type": "text",
-      "text": "GIGAZINE ranking",
-      "weight": "bold",
-      "color": "#000000",
-      "size": "xl"
-    }
-  ]
-},
- "hero": {
-  "type": "image",
-  "url": result[0][2],
-  "size": "full",
-  "aspectRatio": "20:13",
-  "aspectMode": "cover",
-  "action": {
-    "type": "uri",
-    "uri": result[0][1]
-  }
-},
-
-"body": {
-  "type": "box",
-  "layout": "vertical",
-  "contents": [
-    {
-      "type": "box",
-      "layout": "vertical",
-      "margin": "lg",
-      "spacing": "sm",
-      "contents": [
-        {
+      {
+      "type": "bubble",
+      "header": {
           "type": "box",
-          "layout": "baseline",
-          "spacing": "sm",
+          "layout": "horizontal",
           "contents": [
+              {
+                "type": "text",
+                "text": "GIGAZINE ranking",
+                "weight": "bold",
+                "color": "#000000",
+                "size": "xl"
+              }
+          ]
+      },
+      "hero": {
+          "type": "image",
+          "url": result[0][2],
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": result[0][1]
+          }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
             {
-              "type": "text",
-              "text": result[0][0],
-              # "wrap": true,
-              "color": "#666666",
-              "weight": "bold",
-              "size": "sm",
-              "flex": 5
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                    {
+                    "type": "text",
+                    "text": result[0][0],
+                    "wrap": True,
+                    "color": "#666666",
+                    "weight": "bold",
+                    "size": "sm",
+                    "flex": 5
+                    }
+                  ]
+                }
+              ]
             }
           ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "button",
+                "style": "secondary",
+                "action": {
+                    "type": "uri",
+                    "label": "MORE",
+                    "uri": result[0][1]
+                }
+              },
+        {
+        "type": "spacer",
+        "size": "sm"
         }
-      ]
+      ],
+      "flex": 0
     }
-  ]
-},
-"footer": {
-  "type": "box",
-  "layout": "vertical",
-  "spacing": "sm",
-  "contents": [
-    {
-              "type": "button",
-              "style": "secondary",
-              "action": {
-                  "type": "uri",
-                  "label": "MORE",
-                  "uri": "https://gigazine.net/"
-              }
-          },
-    {
-      "type": "spacer",
-      "size": "sm"
-    }
-  ],
-  "flex": 0
-}
-},
+  },
   {
 "type": "bubble",
 "header": {
@@ -136,7 +135,7 @@ code = {
             {
               "type": "text",
               "text": result[1][0],
-              # "wrap": true,
+              "wrap": True,
               "color": "#666666",
               "weight": "bold",
               "size": "sm",
@@ -159,7 +158,7 @@ code = {
               "action": {
                   "type": "uri",
                   "label": "MORE",
-                  "uri": "https://gigazine.net/"
+                  "uri": result[1][1]
               }
           },
     {
@@ -215,7 +214,7 @@ code = {
             {
               "type": "text",
               "text": result[2][0],
-              # "wrap": true,
+              "wrap": True,
               "color": "#666666",
               "weight": "bold",
               "size": "sm",
@@ -238,7 +237,7 @@ code = {
               "action": {
                   "type": "uri",
                   "label": "MORE",
-                  "uri": "https://gigazine.net/"
+                  "uri": result[2][1]
               }
           },
     {
@@ -266,13 +265,13 @@ code = {
 },
  "hero": {
   "type": "image",
-  "url": "https://i.gzn.jp/img/2018/11/28/how-melt-gold-room-temperature/00_m.jpg",
+  "url": result[3][2],
   "size": "full",
   "aspectRatio": "20:13",
   "aspectMode": "cover",
   "action": {
     "type": "uri",
-    "uri": "http://linecorp.com/"
+    "uri": result[3][1]
   }
 },
 
@@ -293,8 +292,8 @@ code = {
           "contents": [
             {
               "type": "text",
-              "text": "常温で溶けるはずのない「金」を室温でも簡単に溶かす方法が発見される",
-              # "wrap": true,
+              "text": result[3][0],
+              "wrap": True,
               "color": "#666666",
               "weight": "bold",
               "size": "sm",
@@ -317,7 +316,7 @@ code = {
               "action": {
                   "type": "uri",
                   "label": "MORE",
-                  "uri": "https://gigazine.net/"
+                  "uri": result[3][1]
               }
           },
     {
@@ -345,13 +344,13 @@ code = {
 },
  "hero": {
   "type": "image",
-  "url": "https://i.gzn.jp/img/2018/11/28/how-melt-gold-room-temperature/00_m.jpg",
+  "url": result[4][2],
   "size": "full",
   "aspectRatio": "20:13",
   "aspectMode": "cover",
   "action": {
     "type": "uri",
-    "uri": "http://linecorp.com/"
+    "uri": result[4][1]
   }
 },
 
@@ -372,8 +371,8 @@ code = {
           "contents": [
             {
               "type": "text",
-              "text": "常温で溶けるはずのない「金」を室温でも簡単に溶かす方法が発見される",
-              # "wrap": true,
+              "text": result[4][0],
+              "wrap": True,
               "color": "#666666",
               "weight": "bold",
               "size": "sm",
@@ -390,24 +389,416 @@ code = {
   "layout": "vertical",
   "spacing": "sm",
   "contents": [
-    {
-              "type": "button",
-              "style": "secondary",
-              "action": {
-                  "type": "uri",
-                  "label": "MORE",
-                  "uri": "https://gigazine.net/"
-              }
-          },
-    {
+      {
+      "type": "button",
+      "style": "secondary",
+      "action": {
+        "type": "uri",
+        "label": "MORE",
+        "uri": result[4][1]
+        }
+      },
+      {
       "type": "spacer",
       "size": "sm"
+      }
+    ],
+    "flex": 0
     }
-  ],
-  "flex": 0
-}
-}
-]
+  },
+  {
+      "type": "bubble",
+      "header": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+              {
+                "type": "text",
+                "text": "GIGAZINE ranking",
+                "weight": "bold",
+                "color": "#000000",
+                "size": "xl"
+              }
+          ]
+      },
+      "hero": {
+          "type": "image",
+          "url": result[5][2],
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": result[5][1]
+          }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                    {
+                    "type": "text",
+                    "text": result[5][0],
+                    "wrap": True,
+                    "color": "#666666",
+                    "weight": "bold",
+                    "size": "sm",
+                    "flex": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "button",
+                "style": "secondary",
+                "action": {
+                    "type": "uri",
+                    "label": "MORE",
+                    "uri": result[5][1]
+                }
+              },
+        {
+        "type": "spacer",
+        "size": "sm"
+        }
+      ],
+      "flex": 0
+    }
+  },
+  {
+      "type": "bubble",
+      "header": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+              {
+                "type": "text",
+                "text": "GIGAZINE ranking",
+                "weight": "bold",
+                "color": "#000000",
+                "size": "xl"
+              }
+          ]
+      },
+      "hero": {
+          "type": "image",
+          "url": result[6][2],
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": result[6][1]
+          }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                    {
+                    "type": "text",
+                    "text": result[6][0],
+                    "wrap": True,
+                    "color": "#666666",
+                    "weight": "bold",
+                    "size": "sm",
+                    "flex": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "button",
+                "style": "secondary",
+                "action": {
+                    "type": "uri",
+                    "label": "MORE",
+                    "uri": result[6][1]
+                }
+              },
+        {
+        "type": "spacer",
+        "size": "sm"
+        }
+      ],
+      "flex": 0
+    }
+  },
+  {
+      "type": "bubble",
+      "header": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+              {
+                "type": "text",
+                "text": "GIGAZINE ranking",
+                "weight": "bold",
+                "color": "#000000",
+                "size": "xl"
+              }
+          ]
+      },
+      "hero": {
+          "type": "image",
+          "url": result[7][2],
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": result[7][1]
+          }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                    {
+                    "type": "text",
+                    "text": result[7][0],
+                    "wrap": True,
+                    "color": "#666666",
+                    "weight": "bold",
+                    "size": "sm",
+                    "flex": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "button",
+                "style": "secondary",
+                "action": {
+                    "type": "uri",
+                    "label": "MORE",
+                    "uri": result[7][1]
+                }
+              },
+        {
+        "type": "spacer",
+        "size": "sm"
+        }
+      ],
+      "flex": 0
+    }
+  },
+  {
+      "type": "bubble",
+      "header": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+              {
+                "type": "text",
+                "text": "GIGAZINE ranking",
+                "weight": "bold",
+                "color": "#000000",
+                "size": "xl"
+              }
+          ]
+      },
+      "hero": {
+          "type": "image",
+          "url": result[8][2],
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": result[8][1]
+          }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                    {
+                    "type": "text",
+                    "text": result[8][0],
+                    "wrap": True,
+                    "color": "#666666",
+                    "weight": "bold",
+                    "size": "sm",
+                    "flex": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "button",
+                "style": "secondary",
+                "action": {
+                    "type": "uri",
+                    "label": "MORE",
+                    "uri": result[8][1]
+                }
+              },
+        {
+        "type": "spacer",
+        "size": "sm"
+        }
+      ],
+      "flex": 0
+    }
+  },
+  {
+      "type": "bubble",
+      "header": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+              {
+                "type": "text",
+                "text": "GIGAZINE ranking",
+                "weight": "bold",
+                "color": "#000000",
+                "size": "xl"
+              }
+          ]
+      },
+      "hero": {
+          "type": "image",
+          "url": result[9][2],
+          "size": "full",
+          "aspectRatio": "20:13",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": result[9][1]
+          }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                    {
+                    "type": "text",
+                    "text": result[9][0],
+                    "wrap": True,
+                    "color": "#666666",
+                    "weight": "bold",
+                    "size": "sm",
+                    "flex": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "footer": {
+            "type": "box",
+            "layout": "vertical",
+            "spacing": "sm",
+            "contents": [
+                {
+                "type": "button",
+                "style": "secondary",
+                "action": {
+                    "type": "uri",
+                    "label": "MORE",
+                    "uri": result[9][1]
+                }
+              },
+        {
+        "type": "spacer",
+        "size": "sm"
+        }
+      ],
+      "flex": 0
+    }
+  }
+
+# contents
+  ]
 }
 
 

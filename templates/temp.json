@@ -45,6 +45,7 @@
                                     {
                                         "type": "text",
                                         "text": "中国政府が「世界初の遺伝子編集ベビーの誕生」を主張する科学者チームに研究中止を命令",
+                                        "wrap": true,
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",
@@ -67,7 +68,7 @@
                         "action": {
                             "type": "uri",
                             "label": "MORE",
-                            "uri": "https://gigazine.net/"
+                            "uri": "http://gigazine.net/news/20181130-china-deny-gene-edited-babies/"
                         }
                     },
                     {
@@ -122,6 +123,7 @@
                                     {
                                         "type": "text",
                                         "text": "「巨大すぎて食肉処理場に断られた牛」はなぜこんなにも巨大になったのか？",
+                                        "wrap": true,
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",
@@ -144,7 +146,7 @@
                         "action": {
                             "type": "uri",
                             "label": "MORE",
-                            "uri": "https://gigazine.net/"
+                            "uri": "http://gigazine.net/news/20181129-big-cow-reason/"
                         }
                     },
                     {
@@ -199,6 +201,7 @@
                                     {
                                         "type": "text",
                                         "text": "父親由来のミトコンドリアDNAが発見され、「ミトコンドリア・イブ」が覆る可能性が示される",
+                                        "wrap": true,
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",
@@ -221,7 +224,319 @@
                         "action": {
                             "type": "uri",
                             "label": "MORE",
-                            "uri": "https://gigazine.net/"
+                            "uri": "http://gigazine.net/news/20181130-mitochondrial-dna-passed-through-fathers/"
+                        }
+                    },
+                    {
+                        "type": "spacer",
+                        "size": "sm"
+                    }
+                ],
+                "flex": 0
+            }
+        },
+        {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "GIGAZINE ranking",
+                        "weight": "bold",
+                        "color": "#000000",
+                        "size": "xl"
+                    }
+                ]
+            },
+            "hero": {
+                "type": "image",
+                "url": "https://i.gzn.jp/img/2018/11/30/headline/00.png",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover",
+                "action": {
+                    "type": "uri",
+                    "uri": "http://gigazine.net/news/20181130-headline/"
+                }
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "lg",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "2018年11月30日のヘッドラインニュース",
+                                        "wrap": true,
+                                        "color": "#666666",
+                                        "weight": "bold",
+                                        "size": "sm",
+                                        "flex": 5
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "action": {
+                            "type": "uri",
+                            "label": "MORE",
+                            "uri": "http://gigazine.net/news/20181130-headline/"
+                        }
+                    },
+                    {
+                        "type": "spacer",
+                        "size": "sm"
+                    }
+                ],
+                "flex": 0
+            }
+        },
+        {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "GIGAZINE ranking",
+                        "weight": "bold",
+                        "color": "#000000",
+                        "size": "xl"
+                    }
+                ]
+            },
+            "hero": {
+                "type": "image",
+                "url": "https://i.gzn.jp/img/2018/11/29/burgerking-1129/00_m.jpg",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover",
+                "action": {
+                    "type": "uri",
+                    "uri": "http://gigazine.net/news/20181129-burgerking-1129/"
+                }
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "lg",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "「いい肉爆盛り感謝祭」でパティ5枚のワッパーチーズをバーガーキングで食べてみました",
+                                        "wrap": true,
+                                        "color": "#666666",
+                                        "weight": "bold",
+                                        "size": "sm",
+                                        "flex": 5
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "action": {
+                            "type": "uri",
+                            "label": "MORE",
+                            "uri": "http://gigazine.net/news/20181129-burgerking-1129/"
+                        }
+                    },
+                    {
+                        "type": "spacer",
+                        "size": "sm"
+                    }
+                ],
+                "flex": 0
+            }
+        },
+        {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "GIGAZINE ranking",
+                        "weight": "bold",
+                        "color": "#000000",
+                        "size": "xl"
+                    }
+                ]
+            },
+            "hero": {
+                "type": "image",
+                "url": "https://i.gzn.jp/img/2018/11/30/microsoft-office-new-icon/00_m.jpg",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover",
+                "action": {
+                    "type": "uri",
+                    "uri": "http://gigazine.net/news/20181130-microsoft-office-new-icon/"
+                }
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "lg",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "Microsoft Officeのアイコンデザインが刷新される",
+                                        "wrap": true,
+                                        "color": "#666666",
+                                        "weight": "bold",
+                                        "size": "sm",
+                                        "flex": 5
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "action": {
+                            "type": "uri",
+                            "label": "MORE",
+                            "uri": "http://gigazine.net/news/20181130-microsoft-office-new-icon/"
+                        }
+                    },
+                    {
+                        "type": "spacer",
+                        "size": "sm"
+                    }
+                ],
+                "flex": 0
+            }
+        },
+        {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "GIGAZINE ranking",
+                        "weight": "bold",
+                        "color": "#000000",
+                        "size": "xl"
+                    }
+                ]
+            },
+            "hero": {
+                "type": "image",
+                "url": "https://i.gzn.jp/img/2018/11/30/selling-samsung-foldable-technology-china/00_m.jpg",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover",
+                "action": {
+                    "type": "uri",
+                    "uri": "http://gigazine.net/news/20181130-selling-samsung-foldable-technology-china/"
+                }
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "lg",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "Samsungの折りたたみ式スマホの秘密を中国に売ったサプライヤーが告発される",
+                                        "wrap": true,
+                                        "color": "#666666",
+                                        "weight": "bold",
+                                        "size": "sm",
+                                        "flex": 5
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "action": {
+                            "type": "uri",
+                            "label": "MORE",
+                            "uri": "http://gigazine.net/news/20181130-selling-samsung-foldable-technology-china/"
                         }
                     },
                     {
@@ -255,7 +570,7 @@
                 "aspectMode": "cover",
                 "action": {
                     "type": "uri",
-                    "uri": "http://linecorp.com/"
+                    "uri": "http://gigazine.net/news/20181128-how-melt-gold-room-temperature/"
                 }
             },
             "body": {
@@ -276,6 +591,7 @@
                                     {
                                         "type": "text",
                                         "text": "常温で溶けるはずのない「金」を室温でも簡単に溶かす方法が発見される",
+                                        "wrap": true,
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",
@@ -298,7 +614,7 @@
                         "action": {
                             "type": "uri",
                             "label": "MORE",
-                            "uri": "https://gigazine.net/"
+                            "uri": "http://gigazine.net/news/20181128-how-melt-gold-room-temperature/"
                         }
                     },
                     {
@@ -326,13 +642,13 @@
             },
             "hero": {
                 "type": "image",
-                "url": "https://i.gzn.jp/img/2018/11/28/how-melt-gold-room-temperature/00_m.jpg",
+                "url": "https://i.gzn.jp/img/2018/11/30/cooling-without-power/00.jpg",
                 "size": "full",
                 "aspectRatio": "20:13",
                 "aspectMode": "cover",
                 "action": {
                     "type": "uri",
-                    "uri": "http://linecorp.com/"
+                    "uri": "http://gigazine.net/news/20181130-cooling-without-power/"
                 }
             },
             "body": {
@@ -352,7 +668,8 @@
                                 "contents": [
                                     {
                                         "type": "text",
-                                        "text": "常温で溶けるはずのない「金」を室温でも簡単に溶かす方法が発見される",
+                                        "text": "暑い晴れた日に電源なしでも気温より大幅に低い温度まで冷却可能な装置をMITの研究者が開発",
+                                        "wrap": true,
                                         "color": "#666666",
                                         "weight": "bold",
                                         "size": "sm",
@@ -375,7 +692,85 @@
                         "action": {
                             "type": "uri",
                             "label": "MORE",
-                            "uri": "https://gigazine.net/"
+                            "uri": "http://gigazine.net/news/20181130-cooling-without-power/"
+                        }
+                    },
+                    {
+                        "type": "spacer",
+                        "size": "sm"
+                    }
+                ],
+                "flex": 0
+            }
+        },
+        {
+            "type": "bubble",
+            "header": {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "GIGAZINE ranking",
+                        "weight": "bold",
+                        "color": "#000000",
+                        "size": "xl"
+                    }
+                ]
+            },
+            "hero": {
+                "type": "image",
+                "url": "https://i.gzn.jp/img/2018/11/29/headline/00.jpg",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover",
+                "action": {
+                    "type": "uri",
+                    "uri": "http://gigazine.net/news/20181129-headline/"
+                }
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "box",
+                        "layout": "vertical",
+                        "margin": "lg",
+                        "spacing": "sm",
+                        "contents": [
+                            {
+                                "type": "box",
+                                "layout": "baseline",
+                                "spacing": "sm",
+                                "contents": [
+                                    {
+                                        "type": "text",
+                                        "text": "2018年11月29日のヘッドラインニュース",
+                                        "wrap": true,
+                                        "color": "#666666",
+                                        "weight": "bold",
+                                        "size": "sm",
+                                        "flex": 5
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "action": {
+                            "type": "uri",
+                            "label": "MORE",
+                            "uri": "http://gigazine.net/news/20181129-headline/"
                         }
                     },
                     {
