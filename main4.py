@@ -37,6 +37,9 @@ template_env = Environment(
     autoescape=select_autoescape(['html', 'xml', 'json'])
 )
 
+ranklis=tes.rank("人気記事")
+subprocess.check_call(['python','make.py'])
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
@@ -81,8 +84,8 @@ def handle_message(event):
     if word !="人気記事":
         result = sc.getNews(word)
     else:
-        result = tes.rank(word)
-        # subprocess.check_call(['python','make.py'])
+        result = ranklis
+        
 
 
 #この後おすすめでpv数から記事取得
@@ -94,8 +97,8 @@ def handle_message(event):
         )  
     elif word=="人気記事":
         les="les"
-        template = template_env.get_template('j1.json')
-        # template = template_env.get_template('temp.json')
+        # template = template_env.get_template('j1.json')
+        template = template_env.get_template('temp.json')
         # template = "temp.json"
         data = template.render(dict(items=les))
 
